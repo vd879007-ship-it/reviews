@@ -116,3 +116,50 @@
   scrollbar-width: none;
 }
 
+/* Dynamic Luxury Pop-Up Modal Animations */
+@keyframes modalPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(24px);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1.03) translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-modal-pop {
+  animation: modalPop 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 3.5s ease-in-out infinite;
+}
+
+@keyframes pulseGoldGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(214, 158, 78, 0.2), 0 20px 45px -10px rgba(36, 22, 14, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(214, 158, 78, 0.45), 0 25px 55px -10px rgba(36, 22, 14, 0.3);
+  }
+}
+
+.luxury-modal-glow {
+  animation: pulseGoldGlow 3s ease-in-out infinite;
+}
+
+
