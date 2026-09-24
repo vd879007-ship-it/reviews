@@ -51,7 +51,7 @@ export default function Footer() {
       <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#C4936E]/40 to-transparent mx-auto mb-5"></div>
 
       {/* Social Media Links (Instagram, Facebook, YouTube, LinkedIn) */}
-      <div className="flex items-center justify-center gap-3 mb-4">
+      <div className="flex items-center justify-center gap-3.5 mb-5">
         {socials.map((s, idx) => (
           <a
             key={idx}
@@ -59,7 +59,8 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={s.name}
-            className="w-8 h-8 rounded-full bg-white border border-[#C4936E]/30 text-[#68422A] flex items-center justify-center hover:bg-[#24160E] hover:text-white hover:border-[#24160E] hover:-translate-y-0.5 transition-all duration-300 shadow-2xs"
+            title={s.name}
+            className="w-11 h-11 rounded-2xl bg-white border-2 border-[#C4936E]/35 text-[#3A2417] flex items-center justify-center hover:bg-[#24160E] hover:text-white hover:border-[#24160E] hover:scale-110 active:scale-95 transition-all duration-300 shadow-sm"
           >
             {s.icon}
           </a>

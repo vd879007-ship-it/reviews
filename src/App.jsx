@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import confetti from 'canvas-confetti';
 import { GOOGLE_REVIEW_URL, BRAND_CONFIG } from './config';
 import Header from './components/Header';
@@ -22,6 +22,59 @@ export default function App() {
     }, 3500);
   };
 
+  const triggerCelebration = useCallback(() => {
+    setIsSuccessModalOpen(true);
+    try {
+      // Big golden celebration confetti burst
+      confetti({
+        particleCount: 80,
+        spread: 80,
+        origin: { y: 0.6 },
+        colors: ['#D69E4E', '#C4936E', '#FAF7F2', '#24160E', '#FFD700']
+      });
+      setTimeout(() => {
+        confetti({
+          particleCount: 40,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: ['#D69E4E', '#C4936E', '#FAF7F2']
+        });
+        confetti({
+          particleCount: 40,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: ['#D69E4E', '#C4936E', '#FAF7F2']
+        });
+      }, 250);
+    } catch (e) {}
+  }, []);
+
+  // Listen for customer returning to the tab after completing their review on Google
+  useEffect(() => {
+    const handleReturn = () => {
+      const isPending = sessionStorage.getItem('pending_review_return');
+      if (isPending === 'true' && document.visibilityState === 'visible') {
+        sessionStorage.removeItem('pending_review_return');
+        // Smooth timeout so the user perceives the return transition nicely
+        setTimeout(() => {
+          triggerCelebration();
+        }, 200);
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleReturn);
+    window.addEventListener('focus', handleReturn);
+    window.addEventListener('pageshow', handleReturn);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleReturn);
+      window.removeEventListener('focus', handleReturn);
+      window.removeEventListener('pageshow', handleReturn);
+    };
+  }, [triggerCelebration]);
+
   const handleOpenGoogleReview = () => {
     if (
       !GOOGLE_REVIEW_URL ||
@@ -29,25 +82,15 @@ export default function App() {
       GOOGLE_REVIEW_URL.includes('YOUR_GOOGLE_REVIEW_LINK')
     ) {
       showToast('Google review link is not configured yet.', 'error');
-      setIsSuccessModalOpen(true);
+      triggerCelebration();
       return;
     }
 
-    // Trigger celebratory golden confetti
-    try {
-      confetti({
-        particleCount: 50,
-        spread: 60,
-        origin: { y: 0.7 },
-        colors: ['#D69E4E', '#C4936E', '#FAF7F2', '#24160E']
-      });
-    } catch (e) {}
+    // Set flag that user has navigated to Google Review
+    sessionStorage.setItem('pending_review_return', 'true');
 
     // Open official Google Business Profile review URL directly
     window.open(GOOGLE_REVIEW_URL, '_blank', 'noopener,noreferrer');
-
-    // Show Thank-You modal popup for when the customer returns
-    setIsSuccessModalOpen(true);
   };
 
   return (
