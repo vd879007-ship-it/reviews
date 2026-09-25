@@ -7,16 +7,16 @@
     --font-brand: 'Cinzel', 'Playfair Display', serif;
     --font-sans: 'Plus Jakarta Sans', 'Outfit', system-ui, -apple-system, sans-serif;
     
-    /* LA CAFE Artisanal Coffee & Vanilla Cream Palette */
+    /* LA CAFE Artisanal Coffee & Logo Sandal Cream Palette */
     --color-espresso-dark: #2B170B;
     --color-espresso-rich: #3D2314;
     --color-coffee-roast: #5C3820;
     --color-caramel-warm: #C2783B;
     --color-amber-gold: #D48D48;
-    --color-latte-cream: #FBF6ED;
-    --color-milk-foam: #FDF8EE;
-    --color-vanilla-soft: #FFFDF9;
-    --color-sand-warm: #EFE3CE;
+    --color-sandal-base: #F8EAC2;
+    --color-sandal-soft: #FCF4DC;
+    --color-sandal-dark: #EDDCAB;
+    --color-vanilla-card: #FFFFFF;
   }
 
   * {
@@ -26,7 +26,7 @@
 
   body {
     font-family: var(--font-sans);
-    background-color: var(--color-latte-cream);
+    background-color: var(--color-sandal-base);
     color: var(--color-espresso-dark);
     margin: 0;
     padding: 0;

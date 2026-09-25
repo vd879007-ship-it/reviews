@@ -19,7 +19,7 @@ export default function QRModal({ isOpen, onClose }) {
     img.onload = () => {
       canvas.width = 1000;
       canvas.height = 1000;
-      ctx.fillStyle = '#FBF6ED';
+      ctx.fillStyle = '#F8EAC2';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(img, 50, 50, 900, 900);
       const pngFile = canvas.toDataURL('image/png');
@@ -33,7 +33,7 @@ export default function QRModal({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#2B170B]/80 backdrop-blur-md animate-fade-in-up">
-      <div className="relative w-full max-w-md bg-[#FBF6ED] rounded-3xl border border-[#C2783B]/50 shadow-2xl p-6 sm:p-7 text-center">
+      <div className="relative w-full max-w-md bg-[#F8EAC2] rounded-3xl border border-[#C2783B]/50 shadow-2xl p-6 sm:p-7 text-center">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 p-2 text-[#2B170B]/50 hover:text-[#2B170B] rounded-full hover:bg-black/5 cursor-pointer"
@@ -76,7 +76,7 @@ export default function QRModal({ isOpen, onClose }) {
           </button>
           <button
             onClick={() => window.print()}
-            className="py-2.5 px-4 rounded-xl bg-white border border-[#C2783B]/50 text-[#2B170B] text-xs font-semibold flex items-center justify-center gap-2 hover:bg-[#FBF6ED] transition-colors cursor-pointer"
+            className="py-2.5 px-4 rounded-xl bg-white border border-[#C2783B]/50 text-[#2B170B] text-xs font-semibold flex items-center justify-center gap-2 hover:bg-[#F8EAC2] transition-colors cursor-pointer"
           >
             <Printer className="w-3.5 h-3.5 text-[#C2783B]" />
             <span>Print Sheet</span>

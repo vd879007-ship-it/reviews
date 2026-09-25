@@ -94,10 +94,10 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FBF6ED] text-[#2B170B] flex flex-col justify-between relative bg-creamy-noise selection:bg-[#C2783B]/30 selection:text-[#2B170B] overflow-x-hidden">
+    <div className="min-h-screen bg-[#F8EAC2] text-[#2B170B] flex flex-col justify-between relative bg-creamy-noise selection:bg-[#C2783B]/30 selection:text-[#2B170B] overflow-x-hidden">
       
-      {/* Soft Ambient Warm Coffee Aroma Radial Aura */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-gradient-to-b from-[#C2783B]/15 via-[#FDF8EE]/50 to-transparent rounded-full blur-3xl pointer-events-none -z-0"></div>
+      {/* Soft Ambient Warm Roasted Caramel & Sandalwood Aura */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-gradient-to-b from-[#C2783B]/16 via-[#FCF4DC]/60 to-transparent rounded-full blur-3xl pointer-events-none -z-0"></div>
 
       <Toast toast={toast} onClose={() => setToast(null)} />
 
