@@ -2,21 +2,21 @@
 
 @layer base {
   :root {
-    --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-    --font-heading: 'Playfair Display', 'Cormorant Garamond', serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-heading: 'Outfit', 'Playfair Display', sans-serif;
     --font-brand: 'Cinzel', 'Playfair Display', serif;
-    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', 'Outfit', system-ui, -apple-system, sans-serif;
     
-    /* Professional Creamy Brown Luxury Palette */
-    --color-mocha-deep: #24160E;
-    --color-mocha: #3A2417;
-    --color-brown-warm: #68422A;
-    --color-caramel: #9E6A47;
-    --color-caramel-light: #C4936E;
-    --color-cashmere: #F7F2EA;
-    --color-cream-soft: #FCFAF6;
-    --color-sand: #EFE8DC;
-    --color-gold-amber: #D69E4E;
+    /* LA CAFE Artisanal Coffee & Vanilla Cream Palette */
+    --color-espresso-dark: #2B170B;
+    --color-espresso-rich: #3D2314;
+    --color-coffee-roast: #5C3820;
+    --color-caramel-warm: #C2783B;
+    --color-amber-gold: #D48D48;
+    --color-latte-cream: #FBF6ED;
+    --color-milk-foam: #FDF8EE;
+    --color-vanilla-soft: #FFFDF9;
+    --color-sand-warm: #EFE3CE;
   }
 
   * {
@@ -26,8 +26,8 @@
 
   body {
     font-family: var(--font-sans);
-    background-color: var(--color-cashmere);
-    color: var(--color-mocha-deep);
+    background-color: var(--color-latte-cream);
+    color: var(--color-espresso-dark);
     margin: 0;
     padding: 0;
   }
@@ -38,11 +38,11 @@
 }
 
 .font-serif-luxury {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
 .font-display {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Outfit', 'Playfair Display', sans-serif;
 }
 
 .font-sans-ui {
@@ -51,13 +51,13 @@
 
 .luxury-card-shadow {
   box-shadow: 
-    0 4px 6px -1px rgba(36, 22, 14, 0.03),
-    0 16px 36px -4px rgba(110, 67, 39, 0.06),
-    0 24px 48px -12px rgba(36, 22, 14, 0.05);
+    0 4px 6px -1px rgba(43, 23, 11, 0.04),
+    0 16px 36px -4px rgba(92, 56, 32, 0.08),
+    0 24px 48px -12px rgba(43, 23, 11, 0.06);
 }
 
 .bg-creamy-noise {
-  background-image: radial-gradient(rgba(158, 106, 71, 0.05) 1px, transparent 0);
+  background-image: radial-gradient(rgba(194, 120, 59, 0.06) 1px, transparent 0);
   background-size: 24px 24px;
 }
 

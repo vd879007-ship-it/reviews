@@ -1,37 +1,38 @@
 // =======================================================================
-// ROKEA BY RK - GOOGLE REVIEW MICROSITE CONFIGURATION
+// LA CAFE - GOOGLE REVIEW MICROSITE CONFIGURATION
 // =======================================================================
 
 export const GOOGLE_REVIEW_URL = "https://g.page/r/CUnYdHkUFe8IEBI/review";
 
 export const BRAND_CONFIG = {
-  name: "ROKEA BY RK",
-  monogram: "RK",
-  tagline: "HERITAGE • ELEGANCE • TIMELESS",
-  category: "Premium Indian Sarees & Heritage Jewellery",
-  heroTitle: "Your Experience Matters",
-  heroSubtitle: "We'd love to hear about your experience with ROKEA BY RK.",
-  heroHelper: "Your honest feedback helps us serve you better.",
+  name: "LA CAFE",
+  monogram: "LA",
+  logo: "/la-cafe-logo.png",
+  tagline: "ARTISANAL BREWS • FRESH ROASTS • DELIGHTS",
+  category: "Specialty Coffee, Fresh Brews & Gourmet Delights",
+  heroTitle: "Share Your Coffee Experience",
+  heroSubtitle: "Loved your brew at LA CAFE? We would love to hear your thoughts!",
+  heroHelper: "Your feedback inspires our baristas and helps fellow coffee lovers find us.",
   maxChars: 500,
 
   ratingMessages: {
-    1: "We're sorry your experience wasn't what you expected.",
-    2: "Thank you for your feedback.",
+    1: "We're sorry your visit wasn't what you expected.",
+    2: "Thank you for your valuable feedback.",
     3: "Thank you for sharing your experience.",
-    4: "Thank you! We're glad you enjoyed your experience.",
-    5: "Thank you! We're delighted you had a wonderful experience.",
+    4: "Thank you! We're glad you enjoyed your coffee and visit.",
+    5: "Thank you! We're thrilled you loved the LA CAFE experience.",
   },
 
   inspirationTags: [
-    "Exquisite Silk Saree",
-    "Heritage Jewellery Craft",
-    "Bridal Collection",
-    "Exceptional Hospitality",
-    "Bespoke Draping Assistance",
-    "Timeless Quality"
+    "Signature Espresso",
+    "Artisanal Latte Art",
+    "Freshly Roasted Beans",
+    "Cozy Cafe Ambiance",
+    "Delicious Pastries & Bites",
+    "Friendly Baristas"
   ],
 
-  footerNote: "ROKEA BY RK • Dedicated to Indian Heritage & Timeless Luxury",
+  footerNote: "LA CAFE • Dedicated to the Art of Exceptional Coffee & Good Times",
 
   // Social Media Links (Instagram, Facebook, YouTube, LinkedIn)
   socialLinks: {

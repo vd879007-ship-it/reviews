@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, ExternalLink, X, Star, Sparkles } from 'lucide-react';
+import { CheckCircle2, ExternalLink, X, Star, Sparkles, Coffee } from 'lucide-react';
 import { BRAND_CONFIG } from '../config';
 
 export default function SuccessModal({ isOpen, onClose, googleUrl }) {
@@ -51,30 +51,34 @@ export default function SuccessModal({ isOpen, onClose, googleUrl }) {
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#24160E]/80 backdrop-blur-md animate-fade-in-up">
-      {/* Animated Luxury Pop-Up Modal Box */}
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#2B170B]/80 backdrop-blur-md animate-fade-in-up">
+      {/* Animated Cafe Pop-Up Modal Box */}
       <div 
-        className="relative w-full max-w-md bg-gradient-to-b from-[#FFFFFF] to-[#FAF7F2] rounded-3xl border border-[#C4936E]/60 luxury-modal-glow animate-modal-pop p-6 sm:p-8 text-center overflow-hidden shadow-2xl"
+        className="relative w-full max-w-md bg-gradient-to-b from-[#FFFDF9] to-[#FBF6ED] rounded-3xl border border-[#C2783B]/60 luxury-modal-glow animate-modal-pop p-6 sm:p-8 text-center overflow-hidden shadow-2xl"
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title"
       >
-        {/* Top Shimmering Gold Accent Bar */}
-        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#8C5835] via-[#D69E4E] to-[#8C5835]"></div>
+        {/* Top Roasted Caramel Accent Bar */}
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#C2783B] via-[#D48D48] to-[#C2783B]"></div>
 
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 text-[#3A2417]/50 hover:text-[#24160E] hover:rotate-90 rounded-full hover:bg-black/5 transition-all duration-300 cursor-pointer"
+          className="absolute top-4 right-4 p-2 text-[#3D2314]/50 hover:text-[#2B170B] hover:rotate-90 rounded-full hover:bg-black/5 transition-all duration-300 cursor-pointer"
           aria-label="Close modal"
         >
           <X className="w-5 h-5" />
         </button>
 
-        {/* Floating Animated Crest */}
+        {/* Floating Animated Cafe Crest */}
         <div className="animate-float-slow">
-          <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 rounded-full bg-gradient-to-b from-white to-[#F7F2EA] border-2 border-[#C4936E]/50 flex items-center justify-center shadow-md">
-            <CheckCircle2 className="w-9 h-9 sm:w-11 sm:h-11 text-[#8C5835] animate-star-pop" />
+          <div className="w-18 h-18 sm:w-20 sm:h-20 mx-auto mb-3 rounded-full bg-gradient-to-b from-white to-[#F7EEDB] border-2 border-[#C2783B]/50 p-1.5 flex items-center justify-center shadow-lg">
+            <img
+              src={BRAND_CONFIG.logo || "/la-cafe-logo.png"}
+              alt={BRAND_CONFIG.name}
+              className="w-full h-full object-contain rounded-full animate-star-pop"
+            />
           </div>
         </div>
 
@@ -83,18 +87,18 @@ export default function SuccessModal({ isOpen, onClose, googleUrl }) {
           {[1, 2, 3, 4, 5].map((s) => (
             <Star 
               key={s} 
-              className="w-5 h-5 fill-[#D69E4E] text-[#D69E4E] drop-shadow-[0_2px_6px_rgba(214,158,78,0.5)] animate-star-pop" 
+              className="w-5 h-5 fill-[#D48D48] text-[#D48D48] drop-shadow-[0_2px_6px_rgba(212,141,72,0.5)] animate-star-pop" 
             />
           ))}
         </div>
 
         {/* Heading */}
-        <h3 id="modal-title" className="font-display text-2xl sm:text-3xl font-medium text-[#24160E] mb-1.5">
+        <h3 id="modal-title" className="font-display text-2xl sm:text-3xl font-bold text-[#2B170B] mb-1.5">
           Review Submitted!
         </h3>
 
-        <p className="font-sans-ui text-xs sm:text-sm text-[#3A2417]/85 max-w-xs mx-auto leading-relaxed mb-5 font-light">
-          Thank you so much for supporting <strong className="font-medium text-[#24160E]">{BRAND_CONFIG.name}</strong> with your valuable review on Google!
+        <p className="font-sans-ui text-xs sm:text-sm text-[#5C3820] max-w-xs mx-auto leading-relaxed mb-5 font-normal">
+          Thank you so much for supporting <strong className="font-bold text-[#2B170B]">{BRAND_CONFIG.name}</strong> on Google! We can’t wait to brew your next cup.
         </p>
 
         {/* Action Buttons */}
@@ -102,7 +106,7 @@ export default function SuccessModal({ isOpen, onClose, googleUrl }) {
           <button
             type="button"
             onClick={onClose}
-            className="w-full py-3.5 px-5 rounded-full bg-[#24160E] hover:bg-[#3A2417] text-[#FCFAF6] text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+            className="w-full py-3.5 px-5 rounded-full bg-[#2B170B] hover:bg-[#3D2314] text-[#FFFDF9] text-sm font-bold transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
           >
             Done
           </button>
@@ -111,21 +115,21 @@ export default function SuccessModal({ isOpen, onClose, googleUrl }) {
             href={googleUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-2 px-4 rounded-full bg-white border border-[#C4936E]/40 hover:bg-[#FAF7F2] text-[#24160E] text-xs font-medium flex items-center justify-center gap-1.5 transition-all"
+            className="w-full py-2 px-4 rounded-full bg-white border border-[#C2783B]/40 hover:bg-[#FBF6ED] text-[#2B170B] text-xs font-semibold flex items-center justify-center gap-1.5 transition-all"
           >
             <span>Re-open Google Review page</span>
-            <ExternalLink className="w-3.5 h-3.5 text-[#9E6A47]" />
+            <ExternalLink className="w-3.5 h-3.5 text-[#C2783B]" />
           </a>
         </div>
 
         {/* Connect With Us Section */}
         <div className="relative py-2">
           <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-[#C4936E]/25"></div>
+            <div className="w-full border-t border-[#C2783B]/25"></div>
           </div>
           <div className="relative flex justify-center text-xs">
-            <span className="bg-[#FAF7F2] px-3 text-[11px] uppercase tracking-widest text-[#68422A] font-medium">
-              Follow Our Brand
+            <span className="bg-[#FBF6ED] px-3 text-[11px] uppercase tracking-widest text-[#5C3820] font-bold">
+              Follow Our Cafe
             </span>
           </div>
         </div>
@@ -140,7 +144,7 @@ export default function SuccessModal({ isOpen, onClose, googleUrl }) {
               rel="noopener noreferrer"
               aria-label={s.name}
               title={s.name}
-              className={`w-12 h-12 sm:w-13 sm:h-13 rounded-2xl bg-white border-2 border-[#C4936E]/40 text-[#3A2417] flex items-center justify-center hover:bg-[#24160E] hover:text-white hover:border-[#24160E] hover:scale-110 active:scale-95 transition-all duration-300 shadow-md ${s.color}`}
+              className={`w-12 h-12 sm:w-13 sm:h-13 rounded-2xl bg-white border-2 border-[#C2783B]/40 text-[#3D2314] flex items-center justify-center hover:bg-[#2B170B] hover:text-white hover:border-[#2B170B] hover:scale-110 active:scale-95 transition-all duration-300 shadow-md ${s.color}`}
             >
               {s.icon}
             </a>
@@ -148,15 +152,15 @@ export default function SuccessModal({ isOpen, onClose, googleUrl }) {
         </div>
 
         {/* Powered by Skillstart Digital Solutions Link in Modal */}
-        <div className="pt-2 border-t border-[#C4936E]/20">
+        <div className="pt-2 border-t border-[#C2783B]/20">
           <a
             href={BRAND_CONFIG.poweredBy?.url || "https://www.skillstardigitalsolutions.com/"}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-[12px] text-[#68422A] hover:text-[#24160E] font-medium tracking-wide transition-colors group"
+            className="inline-flex items-center gap-1.5 text-[12px] text-[#5C3820] hover:text-[#2B170B] font-semibold tracking-wide transition-colors group"
           >
-            <Sparkles className="w-3.5 h-3.5 text-[#9E6A47] group-hover:rotate-45 transition-transform" />
-            <span className="underline decoration-[#C4936E]/50 underline-offset-2 hover:decoration-[#24160E]">
+            <Sparkles className="w-3.5 h-3.5 text-[#C2783B] group-hover:rotate-45 transition-transform" />
+            <span className="underline decoration-[#C2783B]/50 underline-offset-2 hover:decoration-[#2B170B]">
               {BRAND_CONFIG.poweredBy?.text || "Powered by Skillstart Digital Solutions"}
             </span>
           </a>

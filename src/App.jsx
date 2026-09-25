@@ -25,12 +25,12 @@ export default function App() {
   const triggerCelebration = useCallback(() => {
     setIsSuccessModalOpen(true);
     try {
-      // Big golden celebration confetti burst
+      // Big golden coffee celebration confetti burst
       confetti({
         particleCount: 80,
         spread: 80,
         origin: { y: 0.6 },
-        colors: ['#D69E4E', '#C4936E', '#FAF7F2', '#24160E', '#FFD700']
+        colors: ['#D48D48', '#C2783B', '#FDF8EE', '#2B170B', '#E6A85C']
       });
       setTimeout(() => {
         confetti({
@@ -38,14 +38,14 @@ export default function App() {
           angle: 60,
           spread: 55,
           origin: { x: 0 },
-          colors: ['#D69E4E', '#C4936E', '#FAF7F2']
+          colors: ['#D48D48', '#C2783B', '#FDF8EE']
         });
         confetti({
           particleCount: 40,
           angle: 120,
           spread: 55,
           origin: { x: 1 },
-          colors: ['#D69E4E', '#C4936E', '#FAF7F2']
+          colors: ['#D48D48', '#C2783B', '#FDF8EE']
         });
       }, 250);
     } catch (e) {}
@@ -94,10 +94,10 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F7F2EA] text-[#24160E] flex flex-col justify-between relative bg-creamy-noise selection:bg-[#C4936E]/30 selection:text-[#24160E] overflow-x-hidden">
+    <div className="min-h-screen bg-[#FBF6ED] text-[#2B170B] flex flex-col justify-between relative bg-creamy-noise selection:bg-[#C2783B]/30 selection:text-[#2B170B] overflow-x-hidden">
       
-      {/* Soft Ambient Cream Radial Aura */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-gradient-to-b from-[#C4936E]/12 via-[#FAF7F2]/40 to-transparent rounded-full blur-3xl pointer-events-none -z-0"></div>
+      {/* Soft Ambient Warm Coffee Aroma Radial Aura */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-gradient-to-b from-[#C2783B]/15 via-[#FDF8EE]/50 to-transparent rounded-full blur-3xl pointer-events-none -z-0"></div>
 
       <Toast toast={toast} onClose={() => setToast(null)} />
 
