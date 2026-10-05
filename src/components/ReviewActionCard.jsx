@@ -94,7 +94,7 @@ export default function ReviewActionCard({ onOpenGoogle }) {
 
           {/* WhatsApp Luxury Card */}
           <a
-            href={BRAND_CONFIG.socialLinks?.whatsapp || "https://wa.me/919842279998"}
+            href={BRAND_CONFIG.socialLinks?.whatsapp || "https://wa.me/919842879998"}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
@@ -110,7 +110,7 @@ export default function ReviewActionCard({ onOpenGoogle }) {
                 WhatsApp
               </span>
               <span className="block text-[11px] text-[#5C3820]/75 truncate font-medium">
-                +91 98422 79998
+                +91 98428 79998
               </span>
             </div>
             <ExternalLink className="w-3.5 h-3.5 text-[#C2783B]/60 group-hover:text-[#128C7E] group-hover:translate-x-0.5 transition-all shrink-0" />

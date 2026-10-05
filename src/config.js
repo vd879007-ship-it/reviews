@@ -36,8 +36,8 @@ export const BRAND_CONFIG = {
 
   // Social Media & Contact Links (WhatsApp & Instagram)
   socialLinks: {
-    whatsapp: "https://wa.me/919842279998",
-    whatsappNumber: "9842279998",
+    whatsapp: "https://wa.me/919842879998",
+    whatsappNumber: "9842879998",
     instagram: "https://www.instagram.com/la_cafe_coimbatore?stkn=MnJ2cGwwYjZzc3oy"
   },
 
