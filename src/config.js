@@ -2,7 +2,7 @@
 // LA CAFE - GOOGLE REVIEW MICROSITE CONFIGURATION
 // =======================================================================
 
-export const GOOGLE_REVIEW_URL = "https://g.page/r/CUnYdHkUFe8IEBI/review";
+export const GOOGLE_REVIEW_URL = "https://g.page/r/CXTJZUX5dNewEBM/review";
 
 export const BRAND_CONFIG = {
   name: "LA CAFE",
@@ -34,12 +34,11 @@ export const BRAND_CONFIG = {
 
   footerNote: "LA CAFE • Dedicated to the Art of Exceptional Coffee & Good Times",
 
-  // Social Media Links (Instagram, Facebook, YouTube, LinkedIn)
+  // Social Media & Contact Links (WhatsApp & Instagram)
   socialLinks: {
-    instagram: "https://instagram.com",
-    facebook: "https://facebook.com",
-    youtube: "https://youtube.com",
-    linkedin: "https://linkedin.com"
+    whatsapp: "https://wa.me/919842279998",
+    whatsappNumber: "9842279998",
+    instagram: "https://www.instagram.com/la_cafe_coimbatore?stkn=MnJ2cGwwYjZzc3oy"
   },
 
   // Developer / Agency Credit

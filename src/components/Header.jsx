@@ -1,8 +1,8 @@
 import React from 'react';
 import { BRAND_CONFIG } from '../config';
-import { QrCode, Coffee } from 'lucide-react';
+import { Coffee } from 'lucide-react';
 
-export default function Header({ onOpenQR }) {
+export default function Header() {
   return (
     <header className="pt-6 sm:pt-8 pb-3 text-center px-4 relative">
       <div className="inline-flex flex-col items-center justify-center">
@@ -37,17 +37,6 @@ export default function Header({ onOpenQR }) {
           <Coffee className="w-3.5 h-3.5 text-[#C2783B]" />
           <span>{BRAND_CONFIG.category}</span>
         </div>
-      </div>
-
-      <div className="absolute right-3 top-5 sm:right-4 sm:top-6">
-        <button
-          onClick={onOpenQR}
-          title="Cafe Table QR Code"
-          className="text-[11px] font-sans-ui flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#C2783B]/40 text-[#2B170B] bg-white/95 hover:bg-white hover:border-[#C2783B] transition-all shadow-2xs cursor-pointer backdrop-blur-sm"
-        >
-          <QrCode className="w-3.5 h-3.5 text-[#C2783B]" />
-          <span className="hidden sm:inline font-medium">Table QR</span>
-        </button>
       </div>
     </header>
   );

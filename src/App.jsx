@@ -6,14 +6,12 @@ import Hero from './components/Hero';
 import ReviewActionCard from './components/ReviewActionCard';
 import CustomerReviews from './components/CustomerReviews';
 import SuccessModal from './components/SuccessModal';
-import QRModal from './components/QRModal';
 import Toast from './components/Toast';
 import Footer from './components/Footer';
 
 export default function App() {
   const [toast, setToast] = useState(null);
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
-  const [isQRModalOpen, setIsQRModalOpen] = useState(false);
 
   const showToast = (message, type = 'info') => {
     setToast({ message, type });
@@ -108,14 +106,8 @@ export default function App() {
         googleUrl={GOOGLE_REVIEW_URL}
       />
 
-      {/* QR Code Modal for store displays */}
-      <QRModal
-        isOpen={isQRModalOpen}
-        onClose={() => setIsQRModalOpen(false)}
-      />
-
       <div className="w-full max-w-[760px] mx-auto px-4 sm:px-6 lg:px-8 py-2 z-10 flex-1 flex flex-col">
-        <Header onOpenQR={() => setIsQRModalOpen(true)} />
+        <Header />
 
         <Hero />
 
