@@ -7,7 +7,7 @@ export const GOOGLE_REVIEW_URL = "https://g.page/r/CXTJZUX5dNewEBM/review";
 export const BRAND_CONFIG = {
   name: "LA CAFE",
   monogram: "LA",
-  logo: "/la-cafe-logo.png",
+  logo: "/logo-removebg-preview.png",
   tagline: "GOOD FOOD • SMARTER CHOICES",
   category: "Crafted with Science, Served with Passion",
   heroTitle: "Share Your Coffee Experience",
