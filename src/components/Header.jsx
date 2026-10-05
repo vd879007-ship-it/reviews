@@ -1,6 +1,6 @@
 import React from 'react';
 import { BRAND_CONFIG } from '../config';
-import { Coffee } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 export default function Header() {
   return (
@@ -25,16 +25,17 @@ export default function Header() {
         </h1>
 
         {/* Tagline */}
-        <div className="flex items-center gap-2 mt-1.5">
+        <div className="flex items-center gap-2 mt-2">
           <span className="h-[1px] w-6 sm:w-10 bg-gradient-to-r from-transparent to-[#C2783B]/60"></span>
-          <p className="text-[10px] sm:text-xs tracking-[0.24em] uppercase text-[#5C3820] font-sans-ui font-semibold">
+          <p className="text-[10px] sm:text-xs tracking-[0.24em] uppercase text-[#5C3820] font-sans-ui font-bold">
             {BRAND_CONFIG.tagline}
           </p>
           <span className="h-[1px] w-6 sm:w-10 bg-gradient-to-l from-transparent to-[#C2783B]/60"></span>
         </div>
 
-        <div className="flex items-center justify-center gap-1.5 text-[11px] sm:text-xs text-[#5C3820]/80 font-serif-luxury italic tracking-wide mt-1">
-          <Coffee className="w-3.5 h-3.5 text-[#C2783B]" />
+        {/* Sub-tagline / Philosophy */}
+        <div className="flex items-center justify-center gap-1.5 text-[11px] sm:text-xs text-[#5C3820]/90 font-serif-luxury italic tracking-wide mt-1.5">
+          <Sparkles className="w-3.5 h-3.5 text-[#C2783B]" />
           <span>{BRAND_CONFIG.category}</span>
         </div>
       </div>
