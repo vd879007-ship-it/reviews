@@ -53,7 +53,7 @@ export default function SuccessModal({ isOpen, onClose, googleUrl }) {
 
         {/* Floating Animated Cafe Crest */}
         <div className="animate-float-slow">
-          <div className="w-18 h-18 sm:w-20 sm:h-20 mx-auto mb-3 rounded-full bg-gradient-to-b from-white to-[#F7EEDB] border-2 border-[#C2783B]/50 p-1.5 flex items-center justify-center shadow-lg">
+          <div className="w-22 h-22 sm:w-24 sm:h-24 mx-auto mb-3 rounded-full bg-gradient-to-b from-white to-[#F7EEDB] border-2 border-[#C2783B]/50 p-2 flex items-center justify-center shadow-lg">
             <img
               src={BRAND_CONFIG.logo || "/la-cafe-logo.png"}
               alt={BRAND_CONFIG.name}

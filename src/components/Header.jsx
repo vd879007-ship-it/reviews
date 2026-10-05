@@ -7,16 +7,16 @@ export default function Header() {
     <header className="pt-6 sm:pt-8 pb-3 text-center px-4 relative">
       <div className="inline-flex flex-col items-center justify-center">
         {/* Official Brand Logo Badge */}
-        <div className="relative group mb-3">
-          <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-b from-[#FFFDF9] to-[#F7EEDB] border-2 border-[#C2783B]/50 shadow-md flex items-center justify-center transition-transform duration-500 hover:scale-105">
+        <div className="relative group mb-3.5">
+          <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1.5 bg-gradient-to-b from-[#FFFDF9] to-[#F7EEDB] border-2 border-[#C2783B]/50 shadow-lg flex items-center justify-center transition-transform duration-500 hover:scale-105">
             <img
               src={BRAND_CONFIG.logo || "/la-cafe-logo.png"}
               alt={BRAND_CONFIG.name}
-              className="w-full h-full object-contain rounded-full drop-shadow-xs"
+              className="w-full h-full object-contain rounded-full drop-shadow-sm"
             />
           </div>
           {/* Subtle Glow Ring */}
-          <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#C2783B]/20 via-[#D48D48]/30 to-[#C2783B]/20 blur-sm -z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+          <div className="absolute -inset-1.5 rounded-full bg-gradient-to-r from-[#C2783B]/25 via-[#D48D48]/35 to-[#C2783B]/25 blur-md -z-10 opacity-75 group-hover:opacity-100 transition-opacity"></div>
         </div>
 
         {/* Brand Name */}
