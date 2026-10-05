@@ -5,31 +5,31 @@ import { GOOGLE_REVIEW_URL } from '../config';
 export default function CustomerReviews() {
   const reviews = [
     {
-      name: "Aravind S.",
-      time: "2 days ago",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80",
+      name: "sachin spk",
+      time: "Local Guide • 5/5",
+      avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=120&auto=format&fit=crop&q=80",
       rating: 5,
-      comment: "The signature cold brew and freshly baked almond croissants are simply out of this world! Cozy vibes and passionate baristas.",
-      productImg: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=300&auto=format&fit=crop&q=80",
-      productAlt: "Signature Cold Brew & Pastry"
+      comment: "A great place in the heart of RS Puram. Very polite and courteous staff. I tried the paneer wrap and hot chocolate (classic) — hot chocolate was excellent, very tasty and filling! Ambience was good too, highly recommended.",
+      productImg: "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=300&auto=format&fit=crop&q=80",
+      productAlt: "Classic Hot Chocolate & Paneer Wrap"
     },
     {
-      name: "Meera V.",
-      time: "1 week ago",
-      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&auto=format&fit=crop&q=80",
+      name: "k.santhosh jeevan",
+      time: "Verified Guest • 5/5",
+      avatar: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=120&auto=format&fit=crop&q=80",
       rating: 5,
-      comment: "Best artisanal coffee in the city! The caramel macchiato is rich, aromatic, and perfectly balanced. The aesthetic is stunning.",
-      productImg: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=300&auto=format&fit=crop&q=80",
-      productAlt: "Caramel Macchiato Latte Art"
+      comment: "Great ambiance, delicious food, and friendly staff. A perfect place to relax and spend quality time with friends and family. Pure veg offerings and quick service. Highly recommended!",
+      productImg: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=300&auto=format&fit=crop&q=80",
+      productAlt: "Cozy Ambiance & Delicious Food"
     },
     {
-      name: "Karthik N.",
-      time: "3 days ago",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80",
+      name: "jum",
+      time: "Foodie Reviewer • 5/5",
+      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&auto=format&fit=crop&q=80",
       rating: 5,
-      comment: "Incredible single-origin pour-over. You can immediately taste the quality of the freshly ground beans. My go-to cafe everyday!",
-      productImg: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=300&auto=format&fit=crop&q=80",
-      productAlt: "Single-Origin Pour Over Brew"
+      comment: "Overall, an amazing experience. Tried their jalapeño burrito wrap, stuffed mushroom basket, mushroom feta cheese quesadilla, peri peri fries and raspberry cheesecake. All dishes were tasty with great portions!",
+      productImg: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=300&auto=format&fit=crop&q=80",
+      productAlt: "Gourmet Bites & Raspberry Cheesecake"
     }
   ];
 
