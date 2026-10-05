@@ -3,16 +3,8 @@ import { Star } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="text-center px-4 pt-1 pb-4 max-w-xl mx-auto">
-      <h2 className="font-display text-2xl sm:text-3xl text-[#2B170B] font-bold tracking-tight mb-1.5">
-        How Was Your Brew Today?
-      </h2>
-
-      <p className="font-sans-ui text-xs sm:text-sm text-[#5C3820]/90 max-w-md mx-auto leading-relaxed mb-3.5 font-normal">
-        We take pride in every freshly ground roast and handcrafted brew. Your honest feedback helps fellow coffee lovers discover LA CAFE!
-      </p>
-
-      {/* Google 4.9/5 Badge in Warm Roasted Palette */}
+    <section className="text-center px-4 pt-1 pb-3 max-w-xl mx-auto">
+      {/* Google 4.3/5 Badge in Warm Roasted Palette */}
       <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/95 border border-[#C2783B]/35 shadow-xs">
         <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24">
           <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
@@ -22,12 +14,20 @@ export default function Hero() {
         </svg>
 
         <div className="flex items-center gap-0.5">
-          {[1, 2, 3, 4, 5].map((s) => (
+          {/* 4 Full Golden Stars */}
+          {[1, 2, 3, 4].map((s) => (
             <Star key={s} className="w-3.5 h-3.5 fill-[#D48D48] text-[#D48D48]" />
           ))}
+          {/* 5th Fractional Star (0.3 / 30% fill for 4.3 rating) */}
+          <div className="relative inline-flex items-center w-3.5 h-3.5">
+            <Star className="w-3.5 h-3.5 text-[#D48D48]/35 fill-[#D48D48]/15" />
+            <div className="absolute top-0 left-0 h-full w-[35%] overflow-hidden">
+              <Star className="w-3.5 h-3.5 fill-[#D48D48] text-[#D48D48] max-w-none" />
+            </div>
+          </div>
         </div>
 
-        <span className="text-xs font-semibold font-sans-ui text-[#2B170B]">4.9 / 5</span>
+        <span className="text-xs font-semibold font-sans-ui text-[#2B170B]">4.3 / 5</span>
         <span className="text-[11px] text-[#5C3820] font-sans-ui hidden sm:inline">• Google Reviews</span>
       </div>
     </section>

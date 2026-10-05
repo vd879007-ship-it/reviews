@@ -26,12 +26,28 @@ export default function ReviewActionCard({ onOpenGoogle }) {
       </div>
 
       <h3 className="font-display text-2xl sm:text-3xl text-[#2B170B] font-bold tracking-tight mb-2">
-        Rate Your Coffee & Bites
+        Rate Your Taste Experience
       </h3>
 
-      <p className="font-sans-ui text-xs sm:text-sm text-[#5C3820]/85 max-w-md mx-auto leading-relaxed mb-6 font-normal">
-        From our signature espresso blends and silky lattes to fresh pastries, we’d love to know what made your visit special! Tap below to review us on Google.
-      </p>
+      <div className="max-w-md mx-auto mb-6 space-y-2.5">
+        <p className="font-serif-luxury italic text-sm sm:text-base text-[#C2783B] font-bold tracking-wide">
+          “Experience the Cafe Revolution”
+        </p>
+
+        <p className="font-sans-ui text-xs sm:text-sm text-[#5C3820]/90 leading-relaxed font-normal">
+          Breaking boundaries with the history of coffee brewing — <span className="font-bold text-[#2B170B]">"Science"</span>
+        </p>
+
+        {/* Feature Highlights Badges */}
+        <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFFDF9] border border-[#C2783B]/35 text-[#2B170B] text-[11px] font-bold font-sans-ui shadow-2xs hover:border-[#C2783B] transition-colors">
+            ⚡ Tech Meets Plates!
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFFDF9] border border-[#C2783B]/35 text-[#2B170B] text-[11px] font-bold font-sans-ui shadow-2xs hover:border-[#C2783B] transition-colors">
+            🚴 BIKING COMMUNITY
+          </span>
+        </div>
+      </div>
 
       {/* Primary 1-Click Submit CTA Button */}
       <button

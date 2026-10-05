@@ -33,20 +33,27 @@ export default function CustomerReviews() {
     }
   ];
 
+  const getAvatarStyle = (index) => {
+    const styles = [
+      'bg-[#7B1FA2] text-white', // S - Purple
+      'bg-[#2E7D32] text-white', // K - Green
+      'bg-[#D84315] text-white', // J - Warm Orange
+    ];
+    return styles[index % styles.length];
+  };
+
   // Helper card component for consistent rendering
-  const renderCard = (rev, idx) => (
+  const renderCard = (rev, idx, colorIdx) => (
     <div
       key={idx}
       className="w-[280px] sm:w-[300px] md:w-auto flex-shrink-0 rounded-2xl bg-white border border-[#C2783B]/25 p-4 sm:p-5 shadow-xs flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-md select-none"
     >
       <div>
         <div className="flex items-center gap-3 mb-3">
-          <img
-            src={rev.avatar}
-            alt={rev.name}
-            className="w-10 h-10 rounded-full object-cover border border-[#C2783B]/30"
-            loading="lazy"
-          />
+          {/* Google Style Letter Initial Avatar */}
+          <div className={`w-10 h-10 rounded-full flex items-center justify-center font-display font-bold text-base shadow-2xs ${getAvatarStyle(colorIdx ?? 0)} shrink-0 uppercase`}>
+            {rev.name.trim().charAt(0)}
+          </div>
           <div>
             <h4 className="text-sm font-bold font-sans-ui text-[#2B170B]">
               {rev.name}
@@ -111,14 +118,14 @@ export default function CustomerReviews() {
       {/* 1. Mobile Horizontal Infinite Marquee Carousel */}
       <div className="block md:hidden w-full overflow-hidden relative py-2 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
         <div className="animate-marquee gap-3.5 flex">
-          {reviews.map((rev, i) => renderCard(rev, `m1-${i}`))}
-          {reviews.map((rev, i) => renderCard(rev, `m2-${i}`))}
+          {reviews.map((rev, i) => renderCard(rev, `m1-${i}`, i))}
+          {reviews.map((rev, i) => renderCard(rev, `m2-${i}`, i))}
         </div>
       </div>
 
       {/* 2. Desktop 3-Column Grid */}
       <div className="hidden md:grid md:grid-cols-3 gap-4">
-        {reviews.map((rev, i) => renderCard(rev, `d-${i}`))}
+        {reviews.map((rev, i) => renderCard(rev, `d-${i}`, i))}
       </div>
     </section>
   );
